@@ -10,7 +10,9 @@ function getOdd(match: Match, pick: BetPick) {
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const match = matches.matches.find((item) => item.id === body.matchId);
+  const match = matches.matches.find((item) => item.id === body.matchId) as
+    | Match
+    | undefined;
 
   if (!match) {
     return NextResponse.json({ message: "Match not found" }, { status: 404 });
