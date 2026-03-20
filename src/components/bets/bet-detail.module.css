@@ -1,0 +1,105 @@
+.card {
+  margin: 32px 0 40px;
+  padding: 28px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(22, 26, 34, 0.98), rgba(12, 15, 20, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.kicker {
+  color: #8af8c8;
+  font-weight: 700;
+}
+
+.title {
+  margin: 10px 0 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.meta {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.status {
+  min-width: 100px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.status[data-status="PENDING"] {
+  background: rgba(255, 195, 0, 0.14);
+  color: #ffd76f;
+}
+
+.status[data-status="WON"] {
+  background: rgba(0, 240, 139, 0.14);
+  color: #8af8c8;
+}
+
+.status[data-status="LOST"] {
+  background: rgba(255, 78, 78, 0.14);
+  color: #ff9090;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.box,
+.teamBox {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.box span,
+.teamBox small {
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.link {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0 18px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00f08b, #00d27a);
+  color: #08130b;
+}
+
+@media (max-width: 900px) {
+  .header,
+  .grid,
+  .infoRow {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}

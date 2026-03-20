@@ -1,0 +1,145 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: rgba(14, 16, 21, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.inner {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brandBadge {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00f08b, #00d27a);
+  color: #09120c;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.brandTitle {
+  color: white;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+.brandSubtitle {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: 180ms ease;
+}
+
+.link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.primaryAction,
+.secondaryAction {
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primaryAction {
+  background: linear-gradient(135deg, #00f08b, #00d27a);
+  color: #08130b;
+}
+
+.secondaryAction {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.userName {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.userEmail {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .inner {
+    width: min(100% - 20px, 1180px);
+    min-height: 70px;
+  }
+
+  .brandSubtitle,
+  .userEmail {
+    display: none;
+  }
+
+  .userBlock {
+    gap: 8px;
+  }
+
+  .userInfo {
+    display: none;
+  }
+
+  .nav {
+    gap: 4px;
+  }
+
+  .link {
+    padding: 9px 12px;
+  }
+}

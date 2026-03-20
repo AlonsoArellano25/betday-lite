@@ -1,0 +1,113 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.card {
+  border-radius: 24px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(22, 26, 34, 0.98), rgba(12, 15, 20, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.matchTitle {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
+.meta {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.status {
+  min-width: 88px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.status[data-status="PENDING"] {
+  background: rgba(255, 195, 0, 0.14);
+  color: #ffd76f;
+}
+
+.status[data-status="WON"] {
+  background: rgba(0, 240, 139, 0.14);
+  color: #8af8c8;
+}
+
+.status[data-status="LOST"] {
+  background: rgba(255, 78, 78, 0.14);
+  color: #ff9090;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  color: rgba(255, 255, 255, 0.52);
+  margin-bottom: 6px;
+}
+
+.link,
+.emptyAction {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 18px;
+  background: linear-gradient(135deg, #00f08b, #00d27a);
+  color: #08130b;
+}
+
+.emptyState {
+  padding: 42px 24px;
+  border-radius: 28px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(22, 26, 34, 0.98), rgba(12, 15, 20, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.emptyState h2 {
+  margin-top: 0;
+}
+
+.emptyState p {
+  color: rgba(255, 255, 255, 0.68);
+  margin-bottom: 22px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dataGrid {
+    grid-template-columns: 1fr;
+  }
+}

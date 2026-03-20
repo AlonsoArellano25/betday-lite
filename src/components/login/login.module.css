@@ -1,0 +1,57 @@
+.wrapper {
+  width: min(440px, 100%);
+  margin: 72px auto;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(22, 26, 34, 0.98), rgba(12, 15, 20, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.text {
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0 16px;
+  color: white;
+}
+
+.submit {
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00f08b, #00d27a);
+  color: #08130b;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.error {
+  color: #ff9696;
+  margin: 0;
+}
